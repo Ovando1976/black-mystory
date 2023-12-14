@@ -1,15 +1,20 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  block-size: 100vh;
+  background-color: #f7f9fc;
 }
 
 .App-logo {
-  height: 40vmin;
+  block-size: 40vmin;
   pointer-events: none;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-block-size: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,4 +33,136 @@
 
 .small {
   font-size: 0.75rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.chat-container {
+  inline-size: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Message List */
+.message-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.message {
+  margin-block-end: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.user-message {
+  background-color: #cfe8fc;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.send-button {
+  margin-inline-start: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.ChatWindow {
+  inline-size: 60%;
+  block-size: 80%;
+  max-inline-size: 800px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-block-start: 2em;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.ChatMessages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.Message {
+  margin-block-end: 15px;
+}
+
+.UserMessage {
+  text-align: end;
+  color: #2c3e50;
+}
+
+.AssistantMessage {
+  color: #8e44ad;
+}
+
+.MessageText {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-block-end: 5px;
+  background-color: #ecf0f1;
+}
+
+.UserMessage .MessageText {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.MessageInfo {
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.MessageInput {
+  padding: 20px;
+  border-block-start: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MessageInput input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  outline: none;
+}
+
+.MessageInput button {
+  margin-inline-start: 10px;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.MessageInput button:hover {
+  background-color: #2980b9;
 }

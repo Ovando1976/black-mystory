@@ -1,0 +1,66 @@
+/* when we have display flex, we can separate the width into 12 parts */
+.leftbar {
+    flex: 3;
+    /* height of topbar is 50px */
+    height: calc(100vh - 50px);
+    /* scrollable based on height */
+    overflow-y: scroll;
+    /* scrollbar customization for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(181, 181, 181) #f1f1f1;
+    position: sticky;
+    top: 50px;
+  }
+  
+  /* scrollbar customization for Chrome */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(181, 181, 181);
+  }
+  
+  .leftbarWrapper {
+    padding: 20px;
+  }
+  
+  .leftbarList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .leftbarListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .leftbarIcon {
+    margin-left: 15px;
+  }
+  
+  .leftbarButton {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .leftbarHr {
+    /* shorthand first is top+bottom second is left+right */
+    margin: 20px 0;
+  }
+  
+  .leftbarFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  

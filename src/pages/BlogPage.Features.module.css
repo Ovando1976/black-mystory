@@ -1,0 +1,47 @@
+/* Chat GPT Container */
+
+.chatGPTContainer {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .chatGPTContainer h2 {
+    margin-block-end: 10px;
+  }
+  
+  /* User Authentication */
+  
+  .authContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: 20px;
+  }
+  
+  .authContainer h3 {
+    margin-block-end: 10px;
+  }
+  
+  /* Responsive Layout */
+  
+  @media (max-inline-size: 768px) {
+    .postListContainer,
+    .newsContainer {
+      inline-size: 100%;
+    }
+  }
+  
+  @media (min-inline-size: 768px) {
+    .postListContainer,
+    .newsContainer {
+      inline-size: 50%;
+      margin-inline-end: 20px;
+    }
+  
+    .newsContainer:last-child {
+      margin-inline-end: 0;
+    }
+  }
+  

@@ -1,0 +1,35 @@
+.groupsContainer {
+    margin: 80px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #f9f9f9; /* Add background color here */
+  }
+
+.group-heading {
+    text-align: center;
+    color: #333;
+    margin-block-end: 30px;
+}
+
+.groups-list {
+    list-style: none;
+    padding: 0;
+}
+
+.group-item {
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    margin-block-end: 20px;
+    border-radius: 5px;
+}
+
+.group-item h2 {
+    margin-block-start: 0;
+}
+
+.group-item p {
+    margin-block-end: 15px;
+}

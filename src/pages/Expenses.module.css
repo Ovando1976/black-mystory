@@ -1,0 +1,58 @@
+.expense-tracker {
+    inline-size: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #023047;
+  }
+  
+  .expense-tracker h1 {
+    font-size: 40px;
+  }
+  .expense-tracker button {
+    margin-inline-start: 10px;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline-start: 200px;
+  }
+  .profile-photo {
+    inline-size: 200px;
+    border-radius: 50%;
+  }
+  
+  .sign-out-button {
+    border: none;
+    margin-block-start: 50px;
+    inline-size: 150px;
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .sign-out-button:hover {
+    background: #3cb0fd;
+  
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .transactions {
+    margin-inline-start: 430px;
+    margin-block-start: 20px;
+    padding-inline-start: 10px;
+    inline-size: 600px;
+    block-size: 400px;
+    overflow: auto;
+    border: 3px solid #023047;
+  }
+  

@@ -1,0 +1,32 @@
+.container {
+    margin: 0 auto;
+    max-inline-size: 900px;
+    padding: 20px;
+  }
+  
+  .header {
+    font-size: 2em;
+    margin-block-end: 1em;
+    text-align: center;
+  }
+  
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .article {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+  

@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.content {
+    inline-size: 80%;
+    max-inline-size: 1200px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-block-start: 20px;
+    text-align: center;
+}
+
+.header {
+    color: #333;
+    margin-block-end: 20px;
+}
+
+.description {
+    color: #666;
+    margin-block-end: 30px;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.actionButton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .header {
+    font-size: 2em;
+    margin-block-end: 0.5em;
+  }
+  
+  .userInfo,
+  .featuredTours,
+  .recentActivity {
+    margin-block-end: 1em;
+  }
+  
+  .actionButton {
+    margin-inline-end: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    border-radius: 0.25em;
+  }
+  
+
+.actionButton:hover {
+    background-color: #0058c9;
+}
+
+

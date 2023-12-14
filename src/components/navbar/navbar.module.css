@@ -1,0 +1,57 @@
+.navbar {
+    inline-size: 100%; /* Ensures full width of the screen */
+    margin: 0; /* Removes any default margin */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00ffff; /* Aqua blue background color */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Responsive adjustments */
+  @media (min-inline-size: 768px) { /* Medium devices (tablets) */
+    .navbar {
+      padding: 20px 30px; /* Increase padding on the sides for tablets */
+    }
+  }
+  
+  @media (min-inline-size: 1024px) { /* Large devices (desktops) */
+    .navbar {
+      padding: 20px 50px; /* Increase padding on the sides for desktops */
+    }
+  }
+  
+  .navLink {
+    background-color: #4169E1; /* Royal blue background color */
+    color: #ffffff; /* White text for the page titles */
+    border: none;
+    border-radius: 50%; /* Rounded corners */
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .navLink:hover {
+    background-color: #031426; /* Darker blue on hover */
+  }
+  
+  .navLink:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(241, 248, 255, 0.25);
+  }
+  
+  .link {
+    /* Your regular link styling */
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    margin: 5px;
+  }
+  
+  .activeLink {
+    /* Styling for the active link */
+    color: #0077cc;
+    border-block-end: 2px solid #0077cc;
+  }
+  

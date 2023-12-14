@@ -1,17 +1,17 @@
+import './Firebase/firebaseConfig'; // Firebase initialization
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { SocketProvider } from './components/SocketContext';
+import io from 'socket.io-client';
+import App from './App'; // Your main app component
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const socket = io('http://localhost:8080'); // Initialize your socket connection
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const RootComponent = () => {
+  return (
+    <SocketProvider socket={socket}>
+      <App />
+    </SocketProvider>
+  );
+};
+
+export default RootComponent;

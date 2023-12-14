@@ -1,0 +1,58 @@
+.container {
+    inline-size: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .header {
+    font-size: 24px;
+    margin-block-end: 20px;
+  }
+  
+  .createGroupButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-block-end: 20px;
+  }
+  
+  .groupsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .groupCard {
+    inline-size: calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .groupImage {
+    inline-size: 100px;
+    block-size: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .joinButton {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-block-start: 10px;
+  }
+  
+  .error {
+    color: red;
+  }
+  

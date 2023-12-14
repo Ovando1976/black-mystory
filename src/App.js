@@ -1,28 +1,35 @@
-import './App.css';
+import React, {BrowserRouter,Routes,Route } from "react-router-dom";
+import Header from "./components/header/Header";
+import NavBar from "./components/navbar/NavBar";
+import Home from "./pages/home";
+import List from "./pages/List";
+import Hotel from "./pages/hotel";
+import Blog from "./pages/blog";
+import User from "./pages/user.js";
+import Groups from "./pages/groups";
+import Events from "./pages/events";
+import Booking from "./pages/booking";
+import DriverProfile from "./pages/driverProfile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hotels" element={<List />} />
+          <Route path="/hotels/:id" element={<Hotel />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/group/:id" element={<Groups/>} />
+          <Route path="/groups" element={<Groups/>} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/driverProfile" element={<DriverProfile/>} />
+          <Route path="*" element={<div>404 Not Found</div>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 

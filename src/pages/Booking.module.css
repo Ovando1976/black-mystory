@@ -1,0 +1,49 @@
+.booking-card {
+    position: relative;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .booking-form {
+    animation: slideUp 1s ease-in;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .info-card {
+    position: absolute;
+    inset-block-end: 20px;
+    inset-inline-end: 20px;
+    background-color: #ddd;
+    padding: 10px;
+    animation: slideInRight 1s ease-in;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
