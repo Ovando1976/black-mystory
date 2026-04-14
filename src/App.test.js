@@ -1,30 +1,29 @@
-{
-  "presets": ["@babel/preset-env", "@babel/preset-react"]
-}
-let email = 'test@example.com';
+import { fireEvent, render, screen } from '@testing-library/react';
+import Home from './pages/home';
 
-
-
-test('renders learn react link', () => {
-  
-  let password = 'your_password'; // Define the 'password' variable
-  auth.signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in 
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders the home welcome heading', () => {
+  render(<Home />);
+  const heading = screen.getByText(/welcome to the usvi explorer/i);
+  expect(heading).toBeInTheDocument();
 });
 
+test('selecting a persona renders persona-specific greeting', () => {
+  render(<Home />);
 
-//userCredential.user.uid
-//userCREdential.user.email
-//user Credential.user.displayName
-//UserCrendential.user.photoURL
+  fireEvent.click(screen.getByRole('button', { name: /the family adventurer/i }));
+
+  expect(screen.getByText(/welcome, the family adventurer!/i)).toBeInTheDocument();
+});
+
+test('send button is disabled until chat input has text', () => {
+  render(<Home />);
+  const sendButton = screen.getByRole('button', { name: /send/i });
+
+  expect(sendButton).toBeDisabled();
+
+  fireEvent.change(screen.getByLabelText(/chat message/i), {
+    target: { value: 'hello' },
+  });
+
+  expect(sendButton).toBeEnabled();
+});
