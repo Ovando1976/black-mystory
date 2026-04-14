@@ -73,8 +73,8 @@
     "@adobe/css-tools": "^4.3.1"
   },
   "scripts": {
-    "start": "BROWSER=none WDS_SOCKET_PORT=0 react-scripts start",
-    "build": "react-scripts build",
+    "start": "GENERATE_SOURCEMAP=false BROWSER=none WDS_SOCKET_PORT=0 react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server.js"
