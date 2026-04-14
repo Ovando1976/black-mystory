@@ -10,25 +10,28 @@ import Groups from "./pages/groups";
 import Events from "./pages/events";
 import Booking from "./pages/booking";
 import DriverProfile from "./pages/driverProfile";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/hotels" element={<List />} />
-          <Route path="/hotels/:id" element={<Hotel />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/user" element={<User />} />
-          <Route path="/group/:id" element={<Groups/>} />
-          <Route path="/groups" element={<Groups/>} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/driverProfile" element={<DriverProfile/>} />
-          <Route path="*" element={<div>404 Not Found</div>} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/hotels" element={<List />} />
+            <Route path="/hotels/:id" element={<Hotel />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/user" element={<User />} />
+            <Route path="/group/:id" element={<Groups/>} />
+            <Route path="/groups" element={<Groups/>} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/driverProfile" element={<DriverProfile/>} />
+            <Route path="*" element={<div>404 Not Found</div>} />
+          </Routes>
+        </ErrorBoundary>
     </BrowserRouter>
   );
 }
